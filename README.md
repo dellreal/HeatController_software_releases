@@ -1,1 +1,1 @@
-# HeatController_software_releases
+App for managing heating controllers
