@@ -1,6 +1,6 @@
 ---
 layout: instruction
-title: Heat Controller App
+title: Heat Controller
 ---
 ## Содержание
 
