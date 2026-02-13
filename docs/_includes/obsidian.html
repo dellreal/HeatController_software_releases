@@ -1,2 +1,30 @@
 <link rel="stylesheet" href="{{ '/assets/callouts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+
 <script src="{{ '/assets/callouts.js' | relative_url }}"></script>
+
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Вернуться наверх">↑</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.getElementById("scrollTopBtn");
+
+    // Отслеживаем прокрутку страницы
+    window.onscroll = function() {
+        // Показываем кнопку, если прокрутили больше 300 пикселей вниз
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+});
+
+// Функция плавного скролла наверх
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>

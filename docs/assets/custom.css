@@ -1,0 +1,53 @@
+/* --- АВТОМАТИЧЕСКАЯ ТЕМНАЯ ТЕМА --- */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0d1117; /* Темно-серый фон в стиле GitHub */
+        color: #c9d1d9; /* Светло-серый текст */
+    }
+    .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+        color: #58a6ff; /* Голубые заголовки */
+    }
+    a {
+        color: #58a6ff;
+    }
+    /* Заливка для блоков кода */
+    code {
+        background-color: rgba(240, 246, 252, 0.15);
+        color: #e6edf3;
+    }
+    pre {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+    }
+    table th, table td {
+        border-color: #30363d;
+    }
+    hr {
+        background-color: #30363d;
+    }
+}
+
+/* --- СТИЛИ ДЛЯ КНОПКИ "НАВЕРХ" --- */
+#scrollTopBtn {
+    display: none; /* Скрыта, пока мы на самом верху */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #159957; /* Зеленый цвет под стать теме Cayman */
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #155799; /* Синий при наведении */
+    transform: translateY(-3px); /* Легкое поднятие при наведении */
+}
