@@ -56,3 +56,8 @@
 .page-header .btn {
     display: none !important;
 }
+
+/* Разрешаем принудительный перенос строк в подзаголовке */
+.page-header .project-tagline {
+    white-space: pre-line;
+}
