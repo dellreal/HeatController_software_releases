@@ -1,9 +1,10 @@
+theme: jekyll-theme-cayman
+title: "Heat Controller App"
+description: "Инструкция по работе с приложением Heat Controller App"
+
 defaults:
   - scope:
-      path: "" # Пустые кавычки означают "применять ко всем файлам"
+      path: ""
       type: "pages"
     values:
       layout: "instruction"
-      theme: jekyll-theme-cayman
-      title: "Heat Controller App"
-      description: Инструкция по работе с приложением Heat Controller App
