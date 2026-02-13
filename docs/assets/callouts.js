@@ -1,41 +1,48 @@
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('blockquote').forEach(function(block) {
-    const firstP = block.querySelector('p');
-    if (!firstP) return;
+    document.querySelectorAll('blockquote').forEach(function(block) {
+        let firstP = block.querySelector('p');
+        if (!firstP) return;
 
-    // Умный поиск: находим тип, заголовок и весь остальной текст, даже если он на новых строках
-    const regex = /^\[!([a-zA-Z]+)\](.*?)(?:<br>|\n|$)([\s\S]*)/i;
-    const match = firstP.innerHTML.match(regex);
+        let html = firstP.innerHTML;
 
-    if (match) {
-      const type = match[1].toLowerCase();
-      // Берем заголовок пользователя (например, "Важно") или ставим стандартный
-      const titleText = match[2].trim() || (type.charAt(0).toUpperCase() + type.slice(1));
-      const remainingContent = match[3].trim();
+        // Умный поиск: учитываем теги <br>, <br />, и любые переносы строк
+        let match = html.match(/^\s*\[!([a-zA-Z]+)\](.*?)(?:<br\s*\/?>|\n)([\s\S]*)/i);
 
-      // Добавляем нужные CSS-классы для цвета и рамки
-      block.classList.add('obsidian-callout', `callout-${type}`);
+        // Если текст состоит всего из одной строки
+        if (!match) {
+            match = html.match(/^\s*\[!([a-zA-Z]+)\](.*)/i);
+            if (match) match[3] = '';
+        }
 
-      // Создаем красивую плашку заголовка
-      const titleDiv = document.createElement('div');
-      titleDiv.className = 'callout-title';
-      titleDiv.innerHTML = titleText;
+        if (match) {
+            let type = match[1].toLowerCase();
+            let titleText = match[2].trim() || (type.charAt(0).toUpperCase() + type.slice(1));
+            let contentHtml = match[3].trim();
 
-      // Создаем обертку для самого текста инструкции
-      const contentDiv = document.createElement('div');
-      contentDiv.className = 'callout-content';
+            // Очищаем текст от служебных меток
+            if (contentHtml === '') {
+                firstP.remove();
+            } else {
+                firstP.innerHTML = contentHtml;
+            }
 
-      // Очищаем первый абзац от технических символов [!WARNING] и помещаем туда чистый текст
-      firstP.innerHTML = remainingContent;
+            // Добавляем классы стилей
+            block.classList.add('obsidian-callout', 'callout-' + type);
 
-      // Аккуратно переносим все абзацы внутрь новой обертки
-      while (block.firstChild) {
-        contentDiv.appendChild(block.firstChild);
-      }
+            // Собираем плашку заголовка
+            let titleDiv = document.createElement('div');
+            titleDiv.className = 'callout-title';
+            titleDiv.innerHTML = titleText;
 
-      // Собираем готовый блок
-      block.appendChild(titleDiv);
-      block.appendChild(contentDiv);
-    }
-  });
+            // Собираем блок с контентом
+            let contentDiv = document.createElement('div');
+            contentDiv.className = 'callout-content';
+            while (block.firstChild) {
+                contentDiv.appendChild(block.firstChild);
+            }
+
+            block.appendChild(titleDiv);
+            block.appendChild(contentDiv);
+        }
+    });
 });

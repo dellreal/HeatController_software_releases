@@ -1,9 +1,9 @@
-/* Обновленный callouts.css - Точная копия Obsidian */
+/* Точная копия дизайна выносок из Obsidian */
 .obsidian-callout {
     margin: 1.5em 0;
     border-radius: 6px;
     overflow: hidden;
-    border: 1px solid rgba(140, 140, 140, 0.2);
+    border: 1px solid var(--callout-border, rgba(140, 140, 140, 0.2));
     background-color: var(--callout-bg, rgba(255, 255, 255, 0.05));
     border-left: 4px solid var(--callout-color, #448aff);
 }
@@ -23,23 +23,25 @@
 .obsidian-callout .callout-content {
     padding: 12px 16px;
     font-size: 0.95em;
-    color: inherit; /* Цвет текста подстраивается под светлую/темную тему */
+    color: inherit;
 }
 
-.obsidian-callout .callout-content p {
-    margin: 0 0 10px 0;
-}
-.obsidian-callout .callout-content p:last-child {
-    margin-bottom: 0;
-}
+.obsidian-callout .callout-content p { margin: 0 0 10px 0; }
+.obsidian-callout .callout-content p:last-child { margin-bottom: 0; }
 
-/* --- НАСТРОЙКИ ЦВЕТОВ ДЛЯ РАЗНЫХ ТИПОВ --- */
+/* Иконки для разных типов блоков */
+.callout-warning .callout-title::before, .callout-caution .callout-title::before { content: "⚠️"; }
+.callout-info .callout-title::before, .callout-todo .callout-title::before { content: "ℹ️"; }
+.callout-danger .callout-title::before, .callout-error .callout-title::before { content: "🛑"; }
+.callout-success .callout-title::before, .callout-tip .callout-title::before { content: "✅"; }
 
+/* --- ЦВЕТА --- */
 /* 1. WARNING, CAUTION (Желто-оранжевый) */
 .callout-warning, .callout-caution {
     --callout-color: #e3a000;
     --callout-title-bg: rgba(227, 160, 0, 0.15);
     --callout-bg: rgba(227, 160, 0, 0.05);
+    --callout-border: rgba(227, 160, 0, 0.2);
 }
 
 /* 2. INFO, NOTE, TODO (Синий) */
@@ -47,18 +49,13 @@
     --callout-color: #007bff;
     --callout-title-bg: rgba(0, 123, 255, 0.15);
     --callout-bg: rgba(0, 123, 255, 0.05);
+    --callout-border: rgba(0, 123, 255, 0.2);
 }
 
-/* 3. DANGER, ERROR, BUG (Красный) */
-.callout-danger, .callout-error, .callout-bug {
+/* 3. DANGER, ERROR (Красный) */
+.callout-danger, .callout-error {
     --callout-color: #ff4a4a;
     --callout-title-bg: rgba(255, 74, 74, 0.15);
     --callout-bg: rgba(255, 74, 74, 0.05);
-}
-
-/* 4. SUCCESS, TIP, CHECK (Зеленый) */
-.callout-success, .callout-tip, .callout-check {
-    --callout-color: #28a745;
-    --callout-title-bg: rgba(40, 167, 69, 0.15);
-    --callout-bg: rgba(40, 167, 69, 0.05);
+    --callout-border: rgba(255, 74, 74, 0.2);
 }
