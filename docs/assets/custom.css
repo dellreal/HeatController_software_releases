@@ -51,3 +51,8 @@
     background-color: #155799; /* Синий при наведении */
     transform: translateY(-3px); /* Легкое поднятие при наведении */
 }
+
+/* Скрываем кнопку View on GitHub в шапке */
+.page-header .btn {
+    display: none !important;
+}

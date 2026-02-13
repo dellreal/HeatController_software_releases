@@ -1,73 +1,64 @@
-/* Базовые стили для всех выносок */
+/* Обновленный callouts.css - Точная копия Obsidian */
 .obsidian-callout {
-    border-left: 4px solid #448aff;
-    background-color: rgba(68, 138, 255, 0.1);
     margin: 1.5em 0;
-    border-radius: 4px;
-    color: #24292e;
+    border-radius: 6px;
     overflow: hidden;
+    border: 1px solid rgba(140, 140, 140, 0.2);
+    background-color: var(--callout-bg, rgba(255, 255, 255, 0.05));
+    border-left: 4px solid var(--callout-color, #448aff);
 }
+
 .obsidian-callout .callout-title {
-    padding: 10px 15px;
+    padding: 12px 16px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     margin: 0;
     font-size: 1.05em;
+    background-color: var(--callout-title-bg, rgba(0, 0, 0, 0.05));
+    color: var(--callout-color, inherit);
 }
+
 .obsidian-callout .callout-content {
-    padding: 0 15px 10px 15px;
+    padding: 12px 16px;
+    font-size: 0.95em;
+    color: inherit; /* Цвет текста подстраивается под светлую/темную тему */
 }
-.obsidian-callout .callout-content p:first-child { margin-top: 5px; }
-.obsidian-callout .callout-content p:last-child { margin-bottom: 0; }
 
-/* 1. INFO, NOTE, TODO (Синий) */
-.callout-info, .callout-note, .callout-todo {
-    border-left-color: #0366d6;
+.obsidian-callout .callout-content p {
+    margin: 0 0 10px 0;
 }
-.callout-info .callout-title, .callout-note .callout-title, .callout-todo .callout-title {
-    background-color: rgba(3, 102, 214, 0.1);
+.obsidian-callout .callout-content p:last-child {
+    margin-bottom: 0;
 }
-.callout-info .callout-title::before { content: "ℹ️"; }
-.callout-note .callout-title::before { content: "📝"; }
-.callout-todo .callout-title::before { content: "✅"; }
 
-/* 2. WARNING, CAUTION (Оранжевый) */
+/* --- НАСТРОЙКИ ЦВЕТОВ ДЛЯ РАЗНЫХ ТИПОВ --- */
+
+/* 1. WARNING, CAUTION (Желто-оранжевый) */
 .callout-warning, .callout-caution {
-    border-left-color: #e36209;
+    --callout-color: #e3a000;
+    --callout-title-bg: rgba(227, 160, 0, 0.15);
+    --callout-bg: rgba(227, 160, 0, 0.05);
 }
-.callout-warning .callout-title, .callout-caution .callout-title {
-    background-color: rgba(227, 98, 9, 0.1);
-}
-.callout-warning .callout-title::before, .callout-caution .callout-title::before { content: "⚠️"; }
 
-/* 3. DANGER, ERROR, BUG, FAILURE (Красный) */
-.callout-danger, .callout-error, .callout-bug, .callout-failure {
-    border-left-color: #d73a49;
+/* 2. INFO, NOTE, TODO (Синий) */
+.callout-info, .callout-note, .callout-todo {
+    --callout-color: #007bff;
+    --callout-title-bg: rgba(0, 123, 255, 0.15);
+    --callout-bg: rgba(0, 123, 255, 0.05);
 }
-.callout-danger .callout-title, .callout-error .callout-title, .callout-bug .callout-title, .callout-failure .callout-title {
-    background-color: rgba(215, 58, 73, 0.1);
+
+/* 3. DANGER, ERROR, BUG (Красный) */
+.callout-danger, .callout-error, .callout-bug {
+    --callout-color: #ff4a4a;
+    --callout-title-bg: rgba(255, 74, 74, 0.15);
+    --callout-bg: rgba(255, 74, 74, 0.05);
 }
-.callout-danger .callout-title::before, .callout-error .callout-title::before { content: "🛑"; }
-.callout-bug .callout-title::before { content: "🐛"; }
-.callout-failure .callout-title::before { content: "❌"; }
 
 /* 4. SUCCESS, TIP, CHECK (Зеленый) */
 .callout-success, .callout-tip, .callout-check {
-    border-left-color: #28a745;
+    --callout-color: #28a745;
+    --callout-title-bg: rgba(40, 167, 69, 0.15);
+    --callout-bg: rgba(40, 167, 69, 0.05);
 }
-.callout-success .callout-title, .callout-tip .callout-title, .callout-check .callout-title {
-    background-color: rgba(40, 167, 69, 0.1);
-}
-.callout-success .callout-title::before, .callout-check .callout-title::before { content: "✔️"; }
-.callout-tip .callout-title::before { content: "💡"; }
-
-/* 5. QUESTION, HELP, FAQ (Желтый) */
-.callout-question, .callout-help, .callout-faq {
-    border-left-color: #dbab09;
-}
-.callout-question .callout-title, .callout-help .callout-title, .callout-faq .callout-title {
-    background-color: rgba(219, 171, 9, 0.1);
-}
-.callout-question .callout-title::before, .callout-help .callout-title::before, .callout-faq .callout-title::before { content: "❓"; }
