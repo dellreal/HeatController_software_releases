@@ -1,3 +1,7 @@
+---
+layout: instruction
+title: Heat Controller App
+---
 ## Содержание
 
 1. [1. Установка приложения](#1-установка-приложения)
