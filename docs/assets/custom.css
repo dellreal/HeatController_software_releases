@@ -33,6 +33,11 @@
     white-space: pre-line;
 }
 
+/* --- КОРРЕКТИРОВКА РАЗМЕРА ЗАГОЛОВКОВ --- */
+h4 { font-size: 1.25rem !important; }
+h5 { font-size: 1.15rem !important; }
+h6 { font-size: 1.05rem !important; }
+
 /* --- СТИЛИ ДЛЯ СПОЙЛЕРОВ (ВИДЕО/ИНФО) --- */
 details {
     background-color: #f6f8fa;
