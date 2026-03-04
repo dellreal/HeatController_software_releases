@@ -59,7 +59,7 @@ title: Heat Controller
 <summary>Смотреть видео по установке приложения</summary>
 <div align="center">
   <iframe width="100%" height="315"
-    src="https://rutube.ru/play/embed/______"
+    src="https://rutube.ru/play/embed/7462fe365174178976a379ac63c9f290/?p=Bu6xyZXosh1dEnJ6hng2tg"
     frameBorder="0"
     allow="clipboard-write; autoplay"
     webkitAllowFullScreen mozallowfullscreen allowFullScreen>
@@ -96,7 +96,7 @@ title: Heat Controller
 <summary>Смотреть виде по подключению контроллера к домашней сети</summary>
 <div align="center">
   <iframe width="100%" height="315"
-    src="https://rutube.ru/play/embed/3e551dbeba01264f712ba7fbc601845b/?p=ViGL_cE_aDOUxCWA8s0_ig"
+    src="https://rutube.ru/play/embed/596e097871423c35134a902e6f4d47bb/?p=7p0D27QFteZq8nkqmZi6Yg"
     frameBorder="0"
     allow="clipboard-write; autoplay"
     webkitAllowFullScreen mozallowfullscreen allowFullScreen>
@@ -295,4 +295,4 @@ title: Heat Controller
 
 ![](images/4-2-6.png)
 
-В этом разделе сгруппирована детальная системная информация о состоянии подключенных устройств, текущих напряжениях, температуре микроконтроллера и прочих инженерных показателях.
+В этом разделе сгруппирована системная информация о состоянии подключенных устройств.
