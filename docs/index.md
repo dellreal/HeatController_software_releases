@@ -55,6 +55,18 @@ title: Heat Controller
 
 Если сразу после установки приложения окно настроек разрешений не открылось автоматически, то все три разрешения необходимо выдать вручную.
 
+<details>
+<summary>Смотреть видео по установке приложения</summary>
+<div align="center">
+  <iframe width="100%" height="315"
+    src="https://rutube.ru/play/embed/______"
+    frameBorder="0"
+    allow="clipboard-write; autoplay"
+    webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+  </iframe>
+</div>
+</details>
+
 ---
 
 ## 2. Первое подключение
@@ -81,8 +93,7 @@ title: Heat Controller
 18. Выполнить настройку плат по желанию.
 
 <details>
-<summary><b>Смотреть видео-инструкцию по подключению контроллера к домашней сети</b></summary>
-<br>
+<summary>Смотреть виде по подключению контроллера к домашней сети</summary>
 <div align="center">
   <iframe width="100%" height="315"
     src="https://rutube.ru/play/embed/3e551dbeba01264f712ba7fbc601845b/?p=ViGL_cE_aDOUxCWA8s0_ig"
@@ -92,6 +103,7 @@ title: Heat Controller
   </iframe>
 </div>
 </details>
+
 ---
 
 ## 3. Главный экран приложения
