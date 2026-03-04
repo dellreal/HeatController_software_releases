@@ -59,19 +59,10 @@ title: Heat Controller
 
 ## 2. Первое подключение
 
-<div align="center">
-  <iframe width="100%" height="315"
-    src="https://rutube.ru/play/embed/196a07ce5f1ff279d187a411434b08ca/?p=dyGp9BYjAz3Eonxtyowkaw"
-    frameBorder="0"
-    allow="clipboard-write; autoplay"
-    webkitAllowFullScreen mozallowfullscreen allowFullScreen>
-  </iframe>
-</div>
+Процедура первого запуска и конфигурации (порядок действий для Android-приставок аналогичный):
 
-Процедура первого запуска и конфигурации (Master/Slave):
-
-1. Заглушить двигатель.
-2. Заменить плату заднего ряда *(если плата одна, то пропустить шаги 2-8)*.
+1. Заглушить двигатель *(если плата одна, то пропустить шаги 2-8)*.
+2. Заменить плату заднего ряда.
 3. Завести двигатель.
 4. Включить в настройках ГУ Wi-Fi и открыть поиск доступных сетей.
 5. В списке найденных сетей выбрать и подключиться к сети **«HeatControllerMaster»**  (пароль `heat0000`).
@@ -89,6 +80,18 @@ title: Heat Controller
 17. Открыть приложение **Heat Controller App** и убедиться, что подключение установлено (карточки сидений на главном экране должны быть активными). Статус подключения можно проверить, если перейти в **«Настройки»** -> **«Настройки устройств»** -> **«Сеть»**  — над кнопкой «Поиск сетей» будет отображаться текущее подключение.
 18. Выполнить настройку плат по желанию.
 
+<details>
+<summary><b>Смотреть видео-инструкцию по подключению контроллера к домашней сети</b></summary>
+<br>
+<div align="center">
+  <iframe width="100%" height="315"
+    src="https://rutube.ru/play/embed/3e551dbeba01264f712ba7fbc601845b/?p=ViGL_cE_aDOUxCWA8s0_ig"
+    frameBorder="0"
+    allow="clipboard-write; autoplay"
+    webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+  </iframe>
+</div>
+</details>
 ---
 
 ## 3. Главный экран приложения
