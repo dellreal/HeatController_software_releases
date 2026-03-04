@@ -61,7 +61,7 @@ title: Heat Controller
 
 <div align="center">
   <iframe width="100%" height="315"
-    src="https://rutube.ru/video/private/196a07ce5f1ff279d187a411434b08ca/?p=dyGp9BYjAz3Eonxtyowkaw"
+    src="https://rutube.ru/play/embed/196a07ce5f1ff279d187a411434b08ca/?p=dyGp9BYjAz3Eonxtyowkaw"
     frameBorder="0"
     allow="clipboard-write; autoplay"
     webkitAllowFullScreen mozallowfullscreen allowFullScreen>
